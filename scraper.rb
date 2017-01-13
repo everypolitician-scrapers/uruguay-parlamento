@@ -1,5 +1,6 @@
 #!/bin/env ruby
 # encoding: utf-8
+# frozen_string_literal: true
 
 require 'scraperwiki'
 require 'nokogiri'
@@ -10,7 +11,7 @@ OpenURI::Cache.cache_path = '.cache'
 
 class String
   def tidy
-    self.gsub(/[[:space:]]+/, ' ').strip
+    gsub(/[[:space:]]+/, ' ').strip
   end
 end
 
@@ -32,18 +33,18 @@ def scrape_list(url)
       next unless tds.count == 3
       link = URI.join(url, tds[2].css('li a[title*="Sitio Personal"]/@href').text).to_s
 
-      data = { 
-        id: link[/ID=(\d+)/, 1],
-        name: tds[2].css('strong').text.tidy,
-        party: current_party,
-        area: tds[2].xpath('.//font/text()').first.text.sub('Departamento de ','').tidy,
-        image: tds[0].css('img/@src').text,
-        email: tds[2].css('li a[href*="mailto:"]/@href').text.sub('mailto:',''),
-        term: 48,
+      data = {
+        id:     link[/ID=(\d+)/, 1],
+        name:   tds[2].css('strong').text.tidy,
+        party:  current_party,
+        area:   tds[2].xpath('.//font/text()').first.text.sub('Departamento de ', '').tidy,
+        image:  tds[0].css('img/@src').text,
+        email:  tds[2].css('li a[href*="mailto:"]/@href').text.sub('mailto:', ''),
+        term:   48,
         source: link,
       }
       data[:image] = URI.join(url, data[:image]).to_s unless data[:image].to_s.empty?
-      ScraperWiki.save_sqlite([:id, :term], data)
+      ScraperWiki.save_sqlite(%i(id term), data)
     end
   end
 end
