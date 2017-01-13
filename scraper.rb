@@ -43,4 +43,5 @@ def scrape_list(url)
   end
 end
 
+ScraperWiki.sqliteexecute('DELETE FROM data') rescue nil
 scrape_list('http://www.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=D&Legislatura=48&Tipo=T')
