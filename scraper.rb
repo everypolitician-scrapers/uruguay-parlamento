@@ -10,40 +10,82 @@ require 'scraperwiki'
 # OpenURI::Cache.cache_path = '.cache'
 require 'scraped_page_archive/open-uri'
 
-def noko_for(url)
-  Nokogiri::HTML(open(url).read)
-end
+class MembersPage < Scraped::HTML
+  decorator Scraped::Response::Decorator::CleanUrls
 
-def scrape_list(url)
-  noko = noko_for(url)
-  current_party = nil
-  noko.xpath('//table[contains(.,"TITULARES")]//tr[td]').each do |tr|
-    if tr.xpath('.//td[@colspan=9 and contains(.,"PARTIDO")]').any?
-      current_party = tr.text.tidy
-      next
-    end
-    next unless current_party
-
-    tr.css('td').each_slice(3).each do |tds|
-      next unless tds.count == 3
-      link = URI.join(url, tds[2].css('li a[title*="Sitio Personal"]/@href').text).to_s
-
-      data = {
-        id:     link[/ID=(\d+)/, 1],
-        name:   tds[2].css('strong').text.tidy,
-        party:  current_party,
-        area:   tds[2].xpath('.//font/text()').first.text.sub('Departamento de ', '').tidy,
-        image:  tds[0].css('img/@src').text,
-        email:  tds[2].css('li a[href*="mailto:"]/@href').text.sub('mailto:', ''),
-        term:   48,
-        source: link,
-      }
-      data[:image] = URI.join(url, data[:image]).to_s unless data[:image].to_s.empty?
-      puts data.reject { |_, v| v.to_s.empty? }.sort_by { |k, _| k }.to_h if ENV['MORPH_DEBUG']
-      ScraperWiki.save_sqlite(%i(id term), data)
+  field :members do
+    noko.css('.views-table tbody tr').map do |tr|
+      fragment(tr => MemberRow).to_h
     end
   end
 end
 
+class MemberRow < Scraped::HTML
+  field :name do
+    td[0].at_css('a').text.tidy
+  end
+
+  field :party do
+    td[1].text.tidy
+  end
+
+  field :area do
+    td[3].text.tidy
+  end
+
+  field :source do
+    td[0].at_css('a/@href').text
+  end
+
+  private
+
+  def td
+    noko.css('td')
+  end
+end
+
+class MemberPage < Scraped::HTML
+  field :id do
+    url.split('/').last
+  end
+
+  field :name do
+    sort_name.split(/\s+,\s+/, 2).reverse.join(' ')
+  end
+
+  field :sort_name do
+    noko.css('.ficha-legislador h2.pane-title').text.tidy
+  end
+
+  field :image do
+    pane.css('img[typeof="foaf:Image"]/@src').text.sub(/\?itok.*/, '').tidy
+  end
+
+  field :email do
+    pane.css('a[href^="mailto:"]').text.tidy
+  end
+
+  field :source do
+    url
+  end
+
+  private
+
+  def pane
+    noko.css('.pane-content')
+  end
+end
+
+def scraper(h)
+  url, klass = h.to_a.first
+  klass.new(response: Scraped::Request.new(url: url).response)
+end
+
+start = 'https://parlamento.gub.uy/sobreelparlamento/integracionhistorica?Cpo_Codigo=D&Quienes=I&Lm_Nombre=0&Tm_Nombre=All'
+data = scraper(start => MembersPage).members.map do |mem|
+  mem.merge(scraper(mem[:source] => MemberPage).to_h).merge(term: 48)
+end
+data.each { |mem| puts mem.reject { |_, v| v.to_s.empty? }.sort_by { |k, _| k }.to_h } if ENV['MORPH_DEBUG']
+
 ScraperWiki.sqliteexecute('DROP TABLE data') rescue nil
-scrape_list('https://www.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=D&Legislatura=48&Tipo=T')
+ScraperWiki.save_sqlite(%i[id term], data)
