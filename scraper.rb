@@ -45,8 +45,10 @@ class MemberRow < Scraped::HTML
 end
 
 class MemberPage < Scraped::HTML
+  # The IDs before we ported to scraped were all of this form. The site
+  # has changed its layout, but for now maintain the same IDs.
   field :id do
-    url.split('/').last
+    4800000 + url.split('/').last.to_i
   end
 
   field :name do
