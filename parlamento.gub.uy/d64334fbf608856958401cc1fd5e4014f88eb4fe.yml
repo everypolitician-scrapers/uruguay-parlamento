@@ -20,7 +20,7 @@ response:
     Server:
     - nginx
     Date:
-    - Tue, 23 May 2017 17:54:11 GMT
+    - Tue, 23 May 2017 18:38:34 GMT
     Content-Type:
     - text/html; charset=utf-8
     Transfer-Encoding:
@@ -34,7 +34,7 @@ response:
     X-Drupal-Cache:
     - HIT
     Etag:
-    - '"1495560863-1"'
+    - '"1495564365-1"'
     Content-Language:
     - es
     X-Frame-Options:
@@ -47,7 +47,7 @@ response:
     Cache-Control:
     - public, max-age=60
     Last-Modified:
-    - Tue, 23 May 2017 17:34:23 GMT
+    - Tue, 23 May 2017 18:32:45 GMT
     Expires:
     - Sun, 19 Nov 1978 05:00:00 GMT
     Vary:
@@ -61,4 +61,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Tue, 23 May 2017 17:53:25 GMT
+recorded_at: Tue, 23 May 2017 18:37:47 GMT
