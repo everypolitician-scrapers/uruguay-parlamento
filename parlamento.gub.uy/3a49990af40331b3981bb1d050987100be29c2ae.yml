@@ -20,11 +20,11 @@ response:
     Server:
     - nginx
     Date:
-    - Wed, 24 May 2017 21:47:37 GMT
+    - Thu, 25 May 2017 09:45:37 GMT
     Content-Type:
     - text/html; charset=utf-8
     Content-Length:
-    - '7926'
+    - '7922'
     Connection:
     - keep-alive
     Keep-Alive:
@@ -50,9 +50,9 @@ response:
     X-Generator:
     - Drupal 7 (http://drupal.org)
     Etag:
-    - '"1495662408-1"'
+    - '"1495705488-1"'
     Last-Modified:
-    - Wed, 24 May 2017 21:46:48 GMT
+    - Thu, 25 May 2017 09:44:48 GMT
     Vary:
     - Cookie,Accept-Encoding
     X-Xss-Protection:
@@ -62,4 +62,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Wed, 24 May 2017 21:46:50 GMT
+recorded_at: Thu, 25 May 2017 09:44:50 GMT
