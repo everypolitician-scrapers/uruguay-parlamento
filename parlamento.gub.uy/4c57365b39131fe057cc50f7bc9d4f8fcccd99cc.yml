@@ -20,11 +20,11 @@ response:
     Server:
     - nginx
     Date:
-    - Sun, 06 Aug 2017 06:49:41 GMT
+    - Sun, 06 Aug 2017 19:20:08 GMT
     Content-Type:
     - text/html; charset=utf-8
     Content-Length:
-    - '7486'
+    - '7479'
     Connection:
     - keep-alive
     Keep-Alive:
@@ -32,14 +32,9 @@ response:
     X-Powered-By:
     - PHP/5.3.3
     X-Drupal-Cache:
-    - MISS
-    Expires:
-    - Sun, 19 Nov 1978 05:00:00 GMT
-    Cache-Control:
-    - public, max-age=60
-    X-Content-Type-Options:
-    - nosniff
-    - nosniff
+    - HIT
+    Etag:
+    - '"1502047180-1"'
     Content-Language:
     - es
     X-Frame-Options:
@@ -49,12 +44,16 @@ response:
     - IE=edge
     X-Generator:
     - Drupal 7 (http://drupal.org)
-    Etag:
-    - '"1502002242-1"'
+    Cache-Control:
+    - public, max-age=60
     Last-Modified:
-    - Sun, 06 Aug 2017 06:50:42 GMT
+    - Sun, 06 Aug 2017 19:19:40 GMT
+    Expires:
+    - Sun, 19 Nov 1978 05:00:00 GMT
     Vary:
     - Cookie,Accept-Encoding
+    X-Content-Type-Options:
+    - nosniff
     X-Xss-Protection:
     - 1; mode=block
     Strict-Transport-Security:
@@ -62,4 +61,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Sun, 06 Aug 2017 06:49:13 GMT
+recorded_at: Sun, 06 Aug 2017 19:19:40 GMT
