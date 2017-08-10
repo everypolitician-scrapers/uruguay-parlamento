@@ -1,0 +1,65 @@
+---
+request:
+  method: get
+  uri: https://parlamento.gub.uy/camarasycomisiones/legisladores/8012
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - "*/*"
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Server:
+    - nginx
+    Date:
+    - Thu, 10 Aug 2017 02:05:40 GMT
+    Content-Type:
+    - text/html; charset=utf-8
+    Content-Length:
+    - '7176'
+    Connection:
+    - keep-alive
+    Keep-Alive:
+    - timeout=5
+    X-Powered-By:
+    - PHP/5.3.3
+    X-Drupal-Cache:
+    - MISS
+    Expires:
+    - Sun, 19 Nov 1978 05:00:00 GMT
+    Cache-Control:
+    - public, max-age=60
+    X-Content-Type-Options:
+    - nosniff
+    - nosniff
+    Content-Language:
+    - es
+    X-Frame-Options:
+    - SAMEORIGIN
+    - SAMEORIGIN
+    X-Ua-Compatible:
+    - IE=edge
+    X-Generator:
+    - Drupal 7 (http://drupal.org)
+    Etag:
+    - '"1502330709-1"'
+    Last-Modified:
+    - Thu, 10 Aug 2017 02:05:09 GMT
+    Vary:
+    - Cookie,Accept-Encoding
+    X-Xss-Protection:
+    - 1; mode=block
+    Strict-Transport-Security:
+    - max-age=63072000; includeSubdomains; preload
+  body:
+    encoding: ASCII-8BIT
+  http_version: 
+recorded_at: Thu, 10 Aug 2017 02:05:13 GMT
