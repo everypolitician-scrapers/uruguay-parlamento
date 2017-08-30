@@ -20,7 +20,7 @@ response:
     Server:
     - nginx
     Date:
-    - Tue, 29 Aug 2017 07:59:27 GMT
+    - Wed, 30 Aug 2017 12:53:45 GMT
     Content-Type:
     - text/html; charset=utf-8
     Transfer-Encoding:
@@ -50,9 +50,9 @@ response:
     X-Generator:
     - Drupal 7 (http://drupal.org)
     Etag:
-    - '"1503993645-1"'
+    - '"1504097601-1"'
     Last-Modified:
-    - Tue, 29 Aug 2017 08:00:45 GMT
+    - Wed, 30 Aug 2017 12:53:21 GMT
     Vary:
     - Cookie,Accept-Encoding
     X-Xss-Protection:
@@ -62,4 +62,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Tue, 29 Aug 2017 07:59:05 GMT
+recorded_at: Wed, 30 Aug 2017 12:53:24 GMT
