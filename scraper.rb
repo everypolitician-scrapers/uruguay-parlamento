@@ -64,7 +64,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :email do
-    pane.css('a[href^="mailto:"]').text.tidy
+    pane.css('a[href^="mailto:"]').map(&:text).map(&:tidy).join(";")
   end
 
   field :source do
