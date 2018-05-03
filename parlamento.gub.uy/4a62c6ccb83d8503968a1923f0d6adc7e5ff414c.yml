@@ -20,7 +20,7 @@ response:
     Server:
     - nginx
     Date:
-    - Wed, 02 May 2018 09:57:14 GMT
+    - Thu, 03 May 2018 13:50:12 GMT
     Content-Type:
     - text/html; charset=utf-8
     Connection:
@@ -28,12 +28,9 @@ response:
     Keep-Alive:
     - timeout=5
     X-Drupal-Cache:
-    - MISS
-    Cache-Control:
-    - public, max-age=60
-    X-Content-Type-Options:
-    - nosniff
-    - nosniff
+    - HIT
+    Etag:
+    - W/"1525355254-0"
     Content-Language:
     - es
     X-Frame-Options:
@@ -45,19 +42,21 @@ response:
     - </node/67615>; rel="shortlink",</camarasycomisiones/legisladores/260>; rel="canonical"
     X-Generator:
     - Drupal 7 (http://drupal.org)
-    Etag:
-    - W/"1525255093-0"
+    Cache-Control:
+    - public, max-age=60
     Last-Modified:
-    - Wed, 02 May 2018 09:58:13 GMT
+    - Thu, 03 May 2018 13:47:34 GMT
     Vary:
     - Cookie
+    X-Content-Type-Options:
+    - nosniff
     X-Xss-Protection:
     - 1; mode=block
     Strict-Transport-Security:
     - max-age=63072000; includeSubdomains; preload
     Content-Length:
-    - '8855'
+    - '8729'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Wed, 02 May 2018 09:55:46 GMT
+recorded_at: Thu, 03 May 2018 13:48:43 GMT
