@@ -1,0 +1,63 @@
+---
+request:
+  method: get
+  uri: https://parlamento.gub.uy/camarasycomisiones/legisladores/12273
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - "*/*"
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Server:
+    - nginx
+    Date:
+    - Tue, 15 May 2018 17:35:25 GMT
+    Content-Type:
+    - text/html; charset=utf-8
+    Connection:
+    - keep-alive
+    Keep-Alive:
+    - timeout=5
+    X-Drupal-Cache:
+    - MISS
+    Cache-Control:
+    - public, max-age=60
+    X-Content-Type-Options:
+    - nosniff
+    - nosniff
+    Content-Language:
+    - es
+    X-Frame-Options:
+    - SAMEORIGIN
+    - SAMEORIGIN
+    X-Ua-Compatible:
+    - IE=edge
+    Link:
+    - </node/87632>; rel="shortlink",</camarasycomisiones/legisladores/12273>; rel="canonical"
+    X-Generator:
+    - Drupal 7 (http://drupal.org)
+    Etag:
+    - W/"1526405625-0"
+    Last-Modified:
+    - Tue, 15 May 2018 17:33:45 GMT
+    Vary:
+    - Cookie
+    X-Xss-Protection:
+    - 1; mode=block
+    Strict-Transport-Security:
+    - max-age=63072000; includeSubdomains; preload
+    Content-Length:
+    - '8306'
+  body:
+    encoding: ASCII-8BIT
+  http_version: 
+recorded_at: Tue, 15 May 2018 17:33:48 GMT
