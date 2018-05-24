@@ -20,7 +20,7 @@ response:
     Server:
     - nginx
     Date:
-    - Wed, 23 May 2018 23:21:23 GMT
+    - Thu, 24 May 2018 19:25:11 GMT
     Content-Type:
     - text/html; charset=utf-8
     Connection:
@@ -46,9 +46,9 @@ response:
     X-Generator:
     - Drupal 7 (http://drupal.org)
     Etag:
-    - W/"1527117579-0"
+    - W/"1527189806-0"
     Last-Modified:
-    - Wed, 23 May 2018 23:19:39 GMT
+    - Thu, 24 May 2018 19:23:26 GMT
     Vary:
     - Cookie
     X-Xss-Protection:
@@ -56,8 +56,8 @@ response:
     Strict-Transport-Security:
     - max-age=63072000; includeSubdomains; preload
     Content-Length:
-    - '8899'
+    - '8878'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Wed, 23 May 2018 23:19:41 GMT
+recorded_at: Thu, 24 May 2018 19:23:29 GMT
