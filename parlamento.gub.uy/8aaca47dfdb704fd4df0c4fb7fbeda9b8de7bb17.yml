@@ -20,19 +20,15 @@ response:
     Server:
     - nginx
     Date:
-    - Wed, 20 Dec 2017 18:42:05 GMT
+    - Mon, 11 Jun 2018 04:44:38 GMT
     Content-Type:
     - text/html; charset=utf-8
-    Content-Length:
-    - '7271'
     Connection:
     - keep-alive
     Keep-Alive:
     - timeout=5
     X-Drupal-Cache:
     - MISS
-    Expires:
-    - Sun, 19 Nov 1978 05:00:00 GMT
     Cache-Control:
     - public, max-age=60
     X-Content-Type-Options:
@@ -45,19 +41,23 @@ response:
     - SAMEORIGIN
     X-Ua-Compatible:
     - IE=edge
+    Link:
+    - </node/68552>; rel="shortlink",</camarasycomisiones/legisladores/5700>; rel="canonical"
     X-Generator:
     - Drupal 7 (http://drupal.org)
     Etag:
-    - '"1513795276-1"'
+    - W/"1528692159-0"
     Last-Modified:
-    - Wed, 20 Dec 2017 18:41:16 GMT
+    - Mon, 11 Jun 2018 04:42:39 GMT
     Vary:
-    - Cookie,Accept-Encoding
+    - Cookie
     X-Xss-Protection:
     - 1; mode=block
     Strict-Transport-Security:
     - max-age=63072000; includeSubdomains; preload
+    Content-Length:
+    - '8251'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Wed, 20 Dec 2017 18:41:18 GMT
+recorded_at: Mon, 11 Jun 2018 04:42:43 GMT
