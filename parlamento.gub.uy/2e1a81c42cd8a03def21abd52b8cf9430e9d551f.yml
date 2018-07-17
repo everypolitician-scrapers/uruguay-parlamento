@@ -1,0 +1,63 @@
+---
+request:
+  method: get
+  uri: https://parlamento.gub.uy/camarasycomisiones/legisladores/7982
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - "*/*"
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Server:
+    - nginx
+    Date:
+    - Tue, 17 Jul 2018 23:18:40 GMT
+    Content-Type:
+    - text/html; charset=utf-8
+    Connection:
+    - keep-alive
+    Keep-Alive:
+    - timeout=5
+    X-Drupal-Cache:
+    - MISS
+    Cache-Control:
+    - public, max-age=60
+    X-Content-Type-Options:
+    - nosniff
+    - nosniff
+    Content-Language:
+    - es
+    X-Frame-Options:
+    - SAMEORIGIN
+    - SAMEORIGIN
+    X-Ua-Compatible:
+    - IE=edge
+    Link:
+    - </node/68717>; rel="shortlink",</camarasycomisiones/legisladores/7982>; rel="canonical"
+    X-Generator:
+    - Drupal 7 (http://drupal.org)
+    Etag:
+    - W/"1531869554-0"
+    Last-Modified:
+    - Tue, 17 Jul 2018 23:19:14 GMT
+    Vary:
+    - Cookie
+    X-Xss-Protection:
+    - 1; mode=block
+    Strict-Transport-Security:
+    - max-age=63072000; includeSubdomains; preload
+    Content-Length:
+    - '8845'
+  body:
+    encoding: ASCII-8BIT
+  http_version: 
+recorded_at: Tue, 17 Jul 2018 23:16:18 GMT
