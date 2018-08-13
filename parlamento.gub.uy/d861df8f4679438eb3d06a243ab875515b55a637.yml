@@ -20,7 +20,7 @@ response:
     Server:
     - nginx
     Date:
-    - Sun, 12 Aug 2018 16:47:02 GMT
+    - Mon, 13 Aug 2018 14:10:47 GMT
     Content-Type:
     - text/html; charset=utf-8
     Connection:
@@ -48,8 +48,8 @@ response:
     Strict-Transport-Security:
     - max-age=63072000; includeSubdomains; preload
     Content-Length:
-    - '14446'
+    - '14447'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Sun, 12 Aug 2018 16:44:26 GMT
+recorded_at: Mon, 13 Aug 2018 14:08:11 GMT
